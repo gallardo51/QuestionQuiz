@@ -340,10 +340,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="Yfh-W0-1xE">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="Oeo-bg-cFc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Oeo-bg-cFc">
+                            <connections>
+                                <segue destination="Z82-fq-Y6x" kind="unwind" unwindAction="unwindWithSegue:" id="ZP1-LL-G63"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animalLabel" destination="JYs-Ww-3cd" id="TJG-Lb-xcf"/>
+                        <outlet property="descriptionLabel" destination="TSs-uC-w7B" id="d8c-4c-d1t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fk6-hP-ind" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Z82-fq-Y6x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2854" y="2"/>
         </scene>
