@@ -7,38 +7,41 @@
 
 struct Question {
     let title: String
-    let answers: [Answer]
     let type: ResponseType
+    let answers: [Answer]
     
     static func getQuestions() -> [Question] {
         [
-        Question(
-            title: "Какую пищу вы предпочитаете?",
-            answers: [
-                Answer(title: "Стейк", animal: .dog),
-                Answer(title: "Рыба", animal: .cat),
-                Answer(title: "Морковь", animal: .rabbit),
-                Answer(title: "Кукуруза", animal: .turtle),
-            ], type: .single
-        ),
-        Question(
-            title: "Что вам нравится больше?",
-            answers: [
-                Answer(title: "Плавать", animal: .dog),
-                Answer(title: "Спать", animal: .cat),
-                Answer(title: "Обнимать", animal: .rabbit),
-                Answer(title: "Есть", animal: .turtle)
-            ], type: .multiple
-        ),
-        Question(
-            title: "Любите ли вы поездки на автомобиле?",
-            answers: [
-                Answer(title: "Ненавижу", animal: .cat),
-                Answer(title: "Нервничаю", animal: .rabbit),
-                Answer(title: "Нормально", animal: .turtle),
-                Answer(title: "Обожаю", animal: .dog)
-            ], type: .ranged
-        )
+            Question(
+                title: "Какую пищу вы предпочитаете?",
+                type: .single,
+                answers: [
+                    Answer(title: "Стейк", animal: .dog),
+                    Answer(title: "Рыба", animal: .cat),
+                    Answer(title: "Морковь", animal: .rabbit),
+                    Answer(title: "Кукуруза", animal: .turtle)
+                ]
+            ),
+            Question(
+                title: "Что вам нравится больше?",
+                type: .multiple,
+                answers: [
+                    Answer(title: "Плавать", animal: .dog),
+                    Answer(title: "Спать", animal: .cat),
+                    Answer(title: "Обнимать", animal: .rabbit),
+                    Answer(title: "Есть", animal: .turtle)
+                ]
+            ),
+            Question(
+                title: "Любите ли вы поездки на автомобиле?",
+                type: .ranged,
+                answers: [
+                    Answer(title: "Ненавижу", animal: .cat),
+                    Answer(title: "Нервничаю", animal: .rabbit),
+                    Answer(title: "Нормально", animal: .turtle),
+                    Answer(title: "Обожаю", animal: .dog)
+                ]
+            )
         ]
     }
 }
